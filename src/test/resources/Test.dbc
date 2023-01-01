@@ -1,0 +1,41 @@
+VERSION "TestVersion1"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_: SendingNODE1 SendingNODE2
+
+
+BO_ 1800 Msg1Txt: 8 SendingNODE1
+ SG_ sg1 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sg2 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1801 Msg2Txt: 8 SendingNODE2
+ SG_ sg3 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+
+
