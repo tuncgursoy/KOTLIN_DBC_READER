@@ -1,6 +1,6 @@
 package Interfaces
 
-interface ValueType
+interface IValueType
 {
     var NAME:String
 

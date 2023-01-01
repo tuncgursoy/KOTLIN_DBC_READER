@@ -1,6 +1,6 @@
 package Interfaces
 
-interface Comment {
+interface IComment {
     enum class CommentType
     {
         COMMENT_MESSAGE,

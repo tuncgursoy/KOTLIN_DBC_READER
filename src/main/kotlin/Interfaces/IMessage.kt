@@ -1,6 +1,6 @@
 package Interfaces
 
-interface Message
+interface IMessage
 {
     var ID:Long
 
@@ -10,5 +10,5 @@ interface Message
 
     var SendingNode:String
 
-    var SIGNAL:Array<SIGNAL>
+    var ISIGNAL:Array<ISIGNAL>
 }

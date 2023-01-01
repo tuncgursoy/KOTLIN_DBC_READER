@@ -1,6 +1,6 @@
 package Interfaces
 
-interface SIGNAL {
+interface ISIGNAL {
 
     var NAME:String
 
@@ -20,7 +20,7 @@ interface SIGNAL {
 
     var UNIT:String
 
-    var COMMENT: Comment
+    var ICOMMENT: IComment?
 
 
 

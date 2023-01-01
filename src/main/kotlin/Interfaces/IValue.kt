@@ -1,10 +1,10 @@
 package Interfaces
 
-interface Value
+interface IValue
 {
     var ID:Long
 
     var SignalName:String
 
-    var VALUE:Array<ValueType>
+    var VALUE:Array<IValueType>
 }

@@ -1,15 +1,15 @@
 package Interfaces
 
-interface DBC
+interface IDBC
 {
     var VERSION:String
 
     var NODES:Array<String>
 
-    var MESSAGE:Array<Message>
+    var IMESSAGE:Array<IMessage>
 
-    var COMMENT:Array<Comment>
+    var ICOMMENT:Array<IComment>
 
-    var VALUES:Array<Value>
+    var IVALUES:Array<IValue>
 
 }
