@@ -1,5 +1,6 @@
 package Source
 
+import Interfaces.IComment
 import org.junit.Assert
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
@@ -50,6 +51,20 @@ internal class DBCTest {
         expectedAnswer.add(SIGNAL("sg1",0,1,true,1.0,0.0,0.0,1.0,"",null))
         expectedAnswer.add(SIGNAL("sg2",1,1,true,1.0,0.0,0.0,1.0,"",null))
         expectedAnswer.add(SIGNAL("sg3",0,2,true,1.0,0.0,0.0,3.0,"",null))
+        Assert.assertEquals(expectedAnswer.toString(),result.toString())
+    }
+
+    @Test
+    fun testfindComments()
+    {
+        val dbc:DBC = DBC()
+        val file:File = File("src/test/resources/Test.dbc")
+        val result = dbc.findComments(file)
+        val expectedAnswer : ArrayList<Comment> = ArrayList()
+        expectedAnswer.add(Comment(IComment.CommentType.COMMENT_SIGNAL,1800,"Test1 Message","sg1"))
+        expectedAnswer.add(Comment(IComment.CommentType.COMMENT_MESSAGE,1800,"SendingNode1 Msg",""))
+        expectedAnswer.add(Comment(IComment.CommentType.COMMENT_MESSAGE,1801,"SendingNode2 Msg",""))
+        expectedAnswer.add(Comment(IComment.CommentType.COMMENT_SIGNAL,1801,"Test3 Message","sg3"))
         Assert.assertEquals(expectedAnswer.toString(),result.toString())
     }
 }

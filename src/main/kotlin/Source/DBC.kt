@@ -1,5 +1,7 @@
 package Source
 
+import Interfaces.IComment
+import java.awt.TrayIcon.MessageType
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
@@ -138,6 +140,51 @@ class DBC(){
         }catch (_:Exception) { }
 
         return  result
+    }
+
+
+    fun findComments(file:File):ArrayList<Comment>
+    {
+        var result =  ArrayList<Comment>()
+        var line: String
+        var splintedLine:List<String>
+
+
+        try {
+            val file  = BufferedReader(FileReader(file))
+            do {
+                line = file.readLine()
+                splintedLine = line.split(' ')
+                splintedLine = splintedLine.filter { x-> x.isNotEmpty() }
+
+                if(splintedLine.isNotEmpty() && splintedLine[0]   == "CM_")
+                {
+                    val commentStartLoc = line.indexOf('"')
+                    val commentEndLoc = line.indexOf(';')
+                    val cmm: Comment
+                    if(splintedLine[1].equals("SG_"))
+                    {
+
+                        cmm = Comment(IComment.CommentType.COMMENT_SIGNAL,splintedLine[2].toLong(),line.substring(commentStartLoc,commentEndLoc).removePrefix("\"").removeSuffix(";").removeSuffix("\""),splintedLine[3])
+                    }else
+                    {
+
+                        cmm = Comment(IComment.CommentType.COMMENT_MESSAGE,splintedLine[2].toLong(),line.substring(commentStartLoc,commentEndLoc).removePrefix("\"").removeSuffix(";").removeSuffix("\""),"")
+                    }
+                    result.add(cmm)
+                }else
+                {
+                    continue
+                }
+
+            }
+            while(line != null)
+
+
+        }catch (_:Exception) { }
+
+
+        return result;
     }
 
 

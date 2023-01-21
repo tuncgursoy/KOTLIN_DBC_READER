@@ -13,4 +13,6 @@ interface IComment {
 
     var COMMENT:String
 
+    var commentedSignal:String
+
 }

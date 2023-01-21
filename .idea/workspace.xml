@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35907896-b0b7-41ae-8c35-e695de3e6d0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBCReader.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IComment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IDBC.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IMessage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/ISIGNAL.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IValue.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IValueType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Source/Comment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Source/DBC.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Source/Message.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Source/SIGNAL.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Source/Value.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Source/ValueType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IComment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IComment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Source/Comment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Source/Comment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Source/DBC.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Source/DBC.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/Source/DBCTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/Source/DBCTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Test.dbc" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Test.dbc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Tunç Gürsoy &lt;tuncgursoy@hotmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -86,8 +77,23 @@
       <recent name="Source" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBCTest (1)">
+  <component name="RunManager" selected="JUnit.DBCTest (5)">
     <configuration name="DBCTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DBCReader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Source" />
+      <option name="MAIN_CLASS_NAME" value="Source.DBCTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBCTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DBCReader" />
       <extension name="coverage">
         <pattern>
@@ -147,28 +153,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DBCReader" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Source.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Source" />
-      <option name="MAIN_CLASS_NAME" value="Source.DBCTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DBCTest (1)" />
-        <item itemvalue="JUnit.DBCTest" />
         <item itemvalue="JUnit.DBCTest (5)" />
         <item itemvalue="JUnit.DBCTest (4)" />
         <item itemvalue="JUnit.DBCTest (3)" />
+        <item itemvalue="JUnit.DBCTest (2)" />
+        <item itemvalue="JUnit.DBCTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +172,29 @@
       <option name="presentableId" value="Default" />
       <updated>1672328174907</updated>
     </task>
+    <task id="LOCAL-00001" summary="Read Version, &#10;Read Message &#10;Read SendingNodes,&#10;Read Signal added">
+      <created>1672581509498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672581509498</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Read Version, &#10;Read Message &#10;Read SendingNodes,&#10;Read Signal added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read Version, &#10;Read Message &#10;Read SendingNodes,&#10;Read Signal added" />
   </component>
 </project>

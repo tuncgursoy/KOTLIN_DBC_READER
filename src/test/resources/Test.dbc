@@ -37,5 +37,8 @@ BO_ 1801 Msg2Txt: 8 SendingNODE2
 
 
 
-
+CM_ SG_ 1800 sg1 "Test1 Message";
+CM_ BO_ 1800 "SendingNode1 Msg";
+CM_ BO_ 1801 "SendingNode2 Msg";
+CM_ SG_ 1801 sg3 "Test3 Message";
 
