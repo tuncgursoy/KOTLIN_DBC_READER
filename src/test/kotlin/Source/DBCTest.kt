@@ -1,6 +1,7 @@
 package Source
 
 import Interfaces.IComment
+import Interfaces.IValueType
 import org.junit.Assert
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
@@ -66,5 +67,27 @@ internal class DBCTest {
         expectedAnswer.add(Comment(IComment.CommentType.COMMENT_MESSAGE,1801,"SendingNode2 Msg",""))
         expectedAnswer.add(Comment(IComment.CommentType.COMMENT_SIGNAL,1801,"Test3 Message","sg3"))
         Assert.assertEquals(expectedAnswer.toString(),result.toString())
+    }
+
+    @Test
+    fun testfindValues()
+    {
+        val dbc:DBC = DBC()
+        val file:File = File("src/test/resources/Test.dbc")
+        val result = dbc.findValues(file)
+        val expectedAnswer : ArrayList<Value> = ArrayList()
+        val expectedAnswerValues1 = ArrayList<IValueType>()
+        expectedAnswerValues1.add(ValueType("Test Value 1",0.0))
+        expectedAnswerValues1.add(ValueType("Test Value 2",1.0))
+        expectedAnswer.add(Value(1800,"sg1",expectedAnswerValues1))
+        val expectedAnswerValues2 = ArrayList<IValueType>()
+        expectedAnswerValues2.add(ValueType("Test Value Test 1",0.0))
+        expectedAnswerValues2.add(ValueType("Test Value Test2",1.0))
+        expectedAnswerValues2.add(ValueType("TestValue3",2.0))
+        expectedAnswerValues2.add(ValueType("TestValue 4",3.0))
+        expectedAnswer.add(Value(1801,"sg3",expectedAnswerValues2))
+
+        Assert.assertEquals(expectedAnswer.toString(),result.toString())
+
     }
 }

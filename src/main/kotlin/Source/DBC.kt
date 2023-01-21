@@ -1,7 +1,7 @@
 package Source
 
 import Interfaces.IComment
-import java.awt.TrayIcon.MessageType
+import Interfaces.IValueType
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
@@ -185,6 +185,55 @@ class DBC(){
 
 
         return result;
+    }
+
+    fun findValues(file:File):ArrayList<Value>
+    {
+        var result = ArrayList<Value>()
+        var line: String
+        var splintedLine:List<String>
+
+
+        try {
+            val file  = BufferedReader(FileReader(file))
+            do {
+                line = file.readLine()
+                splintedLine = line.split(' ')
+                splintedLine = splintedLine.filter { x-> x.isNotEmpty() }
+
+                if(splintedLine.isNotEmpty() && splintedLine[0]   == "VAL_")
+                {
+                    val messageID = splintedLine[1].toLong()
+                    val signalName = splintedLine[2]
+                    val valueList = ArrayList<IValueType>()
+
+
+                    var valuesString = ""
+                    for(i in 3 until splintedLine.size)
+                    {
+                       valuesString+=(" "+splintedLine[i])
+                    }
+                    valuesString.trim();
+                    valuesString.removeSuffix(";")
+                    val splitedValues = valuesString.split('"');
+                    for(i in 0 until splitedValues.size-1 step 2)
+                    {
+                        valueList.add(ValueType(splitedValues[i+1],splitedValues[i].toDouble()))
+                    }
+                     result.add(Value(messageID,signalName,valueList));
+                }else
+                {
+                    continue
+                }
+
+            }
+            while(line != null)
+
+
+        }catch (_:Exception) { }
+
+
+        return  result
     }
 
 

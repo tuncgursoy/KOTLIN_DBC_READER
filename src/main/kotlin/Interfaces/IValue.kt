@@ -6,5 +6,5 @@ interface IValue
 
     var SignalName:String
 
-    var VALUE:Array<IValueType>
+    var VALUE: ArrayList<IValueType>
 }

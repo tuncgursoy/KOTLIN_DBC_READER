@@ -41,4 +41,8 @@ CM_ SG_ 1800 sg1 "Test1 Message";
 CM_ BO_ 1800 "SendingNode1 Msg";
 CM_ BO_ 1801 "SendingNode2 Msg";
 CM_ SG_ 1801 sg3 "Test3 Message";
+VAL_ 1800 sg1 0 "Test Value 1" 1 "Test Value 2"
+VAL_ 1801 sg3 0 "Test Value Test 1" 1 "Test Value Test2" 2 "TestValue3" 3 "TestValue 4"
+
+
 
