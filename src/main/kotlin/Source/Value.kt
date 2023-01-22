@@ -10,7 +10,7 @@ class Value(override var ID: Long, override var SignalName: String, override var
 
         for(i in VALUE)
         {
-            result += i.toString()+" "
+            result += "$i "
         }
         return result
     }

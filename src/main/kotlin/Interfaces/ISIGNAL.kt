@@ -22,6 +22,8 @@ interface ISIGNAL {
 
     var ICOMMENT: IComment?
 
+    var IValue : IValue?
+
 
 
 }

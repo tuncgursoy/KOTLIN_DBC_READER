@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="35907896-b0b7-41ae-8c35-e695de3e6d0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IValue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IValue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IMessage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/IMessage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Interfaces/ISIGNAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Interfaces/ISIGNAL.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Source/DBC.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Source/DBC.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Source/Message.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Source/Message.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Source/SIGNAL.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Source/SIGNAL.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Source/Value.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Source/Value.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Source/ValueType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Source/ValueType.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/Source/DBCTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/Source/DBCTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Test.dbc" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Test.dbc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +79,22 @@
       <recent name="Source" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DBCTest (2)">
+  <component name="RunManager" selected="JUnit.DBCTest (3)">
+    <configuration name="DBCTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DBCReader" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Source" />
+      <option name="MAIN_CLASS_NAME" value="Source.DBCTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DBCTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DBCReader" />
       <extension name="coverage">
@@ -109,22 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBCTest (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DBCReader" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Source.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Source" />
-      <option name="MAIN_CLASS_NAME" value="Source.DBCTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DBCTest (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DBCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DBCReader" />
       <extension name="coverage">
         <pattern>
@@ -157,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DBCTest (3)" />
+        <item itemvalue="JUnit.DBCTest (1)" />
+        <item itemvalue="JUnit.DBCTest" />
         <item itemvalue="JUnit.DBCTest (2)" />
         <item itemvalue="JUnit.DBCTest.testfindValues" />
-        <item itemvalue="JUnit.DBCTest (5)" />
-        <item itemvalue="JUnit.DBCTest (4)" />
-        <item itemvalue="JUnit.DBCTest (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674290106105</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Find Values Function Added">
+      <created>1674318367926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674318367926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,14 +213,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Read Version, &#10;Read Message &#10;Read SendingNodes,&#10;Read Signal added" />
     <MESSAGE value="read Comment function Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="read Comment function Added" />
+    <MESSAGE value="Find Values Function Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Find Values Function Added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/Source/DBC.kt</url>
-          <line>217</line>
+          <line>218</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

@@ -2,6 +2,7 @@ package Source
 
 import Interfaces.IComment
 import Interfaces.ISIGNAL
+import Interfaces.IValue
 
 class SIGNAL(
     override var NAME: String,
@@ -13,11 +14,13 @@ class SIGNAL(
     override var MINIMUM: Double,
     override var MAXIMUM: Double,
     override var UNIT: String,
-    override var ICOMMENT: IComment?
-) :ISIGNAL {
+    override var ICOMMENT: IComment?,
+    override var IValue: IValue?,
+
+    ) :ISIGNAL {
     private var MSG_ID:Long = 0
     override fun toString(): String {
-        return "SIGNAL(NAME='$NAME', SIGNAL_LOC=$SIGNAL_LOC, SIGNAL_SIZE=$SIGNAL_SIZE, IS_UNSIGNED=$IS_UNSIGNED, FACTOR=$FACTOR, OFFSET=$OFFSET, MINIMUM=$MINIMUM, MAXIMUM=$MAXIMUM, UNIT='$UNIT', ICOMMENT=$ICOMMENT)"
+        return "SIGNAL(NAME='$NAME', SIGNAL_LOC=$SIGNAL_LOC, SIGNAL_SIZE=$SIGNAL_SIZE, IS_UNSIGNED=$IS_UNSIGNED, FACTOR=$FACTOR, OFFSET=$OFFSET, MINIMUM=$MINIMUM, MAXIMUM=$MAXIMUM, UNIT='$UNIT', ICOMMENT=$ICOMMENT , IValue=$IValue)"
     }
 
     fun setMessageID(ID:Long)

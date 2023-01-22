@@ -10,5 +10,7 @@ interface IMessage
 
     var SendingNode:String
 
-    var ISIGNAL:Array<ISIGNAL>
+    var ISIGNAL: ArrayList<ISIGNAL>
+
+    var comment: IComment?
 }

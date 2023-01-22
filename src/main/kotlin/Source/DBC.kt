@@ -83,7 +83,8 @@ class DBC(){
                 if(splintedLine[0]   == "BO_")
                 {
                     val msg = Message(splintedLine[1].toLong(),splintedLine[2].removeSuffix(":"),splintedLine[3].toInt(),splintedLine[4],
-                        emptyArray())
+                        ArrayList(),null
+                    )
                     result.add(msg)
                 }else
                 {
@@ -122,7 +123,7 @@ class DBC(){
                         splintedLine[5].subSequence(1,splintedLine[5].indexOf('|')).toString().toDouble(),
                         splintedLine[5].subSequence(splintedLine[5].indexOf('|')+1,splintedLine[5].lastIndex).toString().toDouble(),
                         splintedLine[6].removePrefix("\"").removeSuffix("\""),null
-                        )
+                        ,null)
                     sgn.setMessageID(lastmsgID)
                     result.add(sgn)
                 }else if(splintedLine.isNotEmpty() && splintedLine[0]   == "BO_")
@@ -234,6 +235,66 @@ class DBC(){
 
 
         return  result
+    }
+
+    fun mapDBC(messages:ArrayList<Message>,signals:ArrayList<SIGNAL>,comments:ArrayList<Comment>,values:ArrayList<Value>)
+    {
+        //Value Mapping
+        for(value in values)
+        {
+            for(signal in signals)
+            {
+                if(signal.getMessageID() == value.ID && signal.NAME == value.SignalName)
+                {
+                    signal.IValue = value
+                    break
+                }
+            }
+        }
+
+        // Comment Mapping
+        for (comment in comments)
+        {
+            if(comment.COMMENT_TYPE == IComment.CommentType.COMMENT_SIGNAL)
+            {
+                for(signal in signals)
+                {
+                    if(signal.NAME ==signal.NAME && signal.getMessageID() == comment.ID)
+                    {
+                        signal.ICOMMENT = comment
+                        break
+                    }
+                }
+            }else
+            {
+                for(message in messages)
+                {
+                    if( message.ID == comment.ID)
+                    {
+                        message.comment = comment
+                        break
+                    }
+                }
+            }
+        }
+
+        //SIGNAL Mapping
+        for(signal in signals)
+        {
+            for(message in messages)
+            {
+                if(signal.getMessageID() == message.ID)
+                {
+                    message.ISIGNAL.add(signal)
+                    break
+                }
+            }
+        }
+
+
+
+
+
     }
 
 
